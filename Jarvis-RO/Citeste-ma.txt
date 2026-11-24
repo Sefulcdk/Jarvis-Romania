@@ -1,0 +1,32 @@
+JARVIS RO PENTRU WINDOWS
+
+Instalează Python 3.10 sau mai nou cu Tkinter și lansatorul py. Extrage
+arhiva, apoi deschide Porneste-Jarvis.bat. Comenzile scrise funcționează
+imediat. Pictogramele web apar în fereastră când testul de internet reușește.
+
+Pentru voce, deschide Instaleaza-Vocea.bat. Scriptul folosește
+Python 3.12 pe 64 de biți și instalează pachetele în .venv312.
+Dacă lipsește Python 3.12, încearcă să îl instaleze prin Python Install Manager.
+Apoi deschide Porneste-Jarvis.bat. La prima pornire cu voce, modelul vocal
+se descarcă automat și necesită o conexiune la internet. Cât timp aplicația
+rulează, inclusiv când este minimizată, spune „Salut, Jarvis” sau „Jarvis, trezește-te”, apoi
+rostește o comandă în următoarele 15 secunde. Recunoașterea vocală este locală.
+
+Jarvis încarcă 9.000 de expresii vocale pentru deschiderea celor 40 de
+servicii online și 20 de destinații Windows din comenzi.json. Expresiile
+alternative sunt generate la pornire; ele deschid aceeași aplicație sau
+destinație, nu execută 9.000 de acțiuni diferite.
+
+Pentru comenzi personalizate, editează comenzi.json și repornește Jarvis.
+Fiecare cheie nouă care începe cu „deschide ” devine o destinație pentru
+care Jarvis generează automat formulări alternative. Exemplu:
+    {"arată-mi documentele": ["explorer.exe", "C:\\Users\\Ana\\Documents"]}
+Înlocuiește calea cu cea de pe PC-ul tău. Fiecare valoare este o listă
+formată din executabil urmat de argumente. Adaugă doar comenzi de încredere.
+Apasă „Test sunet” pentru a auzi „Salut, șefule! Sunt Jarvis.”.
+Vocea principală este Microsoft Emil, o voce neurală masculină ro-RO.
+Pentru Emil, textul răspunsului este trimis online la serviciul de
+sinteză vocală. Recunoașterea microfonului cu Whisper rulează local.
+Dacă Emil nu este disponibil, Jarvis folosește o voce masculină română
+instalată și accesibilă sintezei Windows, dacă există. Așteaptă să
+termine de vorbit înainte să dictezi următoarea comandă.
